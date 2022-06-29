@@ -2,7 +2,7 @@
 """
 Created on Wed Jun 29 13:25:57 2022
 
-@author: brendans1020
+brendan.sloan@mourneaerospace.com
 """
 from copy import deepcopy
 from pathlib import Path
@@ -116,9 +116,10 @@ class AcquireImage:
 
         Returns
         -------
-        None
+        openCV image
 
         """
+        self.cv_image = None
         if self.raw_image:
             img0 = np.asarray(self.raw_image, dtype=unit_type)
 
@@ -133,6 +134,8 @@ class AcquireImage:
         else:
             print("No RGB image available to convert to BGR")
 
+        return self.cv_image
+
     # -------------------------------------------------------------------------
     def open_image(self, **kwargs):
         """
@@ -142,7 +145,12 @@ class AcquireImage:
         ------
         kwargs : <dict>
 
+        Returns
+        -------
+        openCV image
+
         """
+        self.cv_image = None
         image_file = get_variable(kwargs, self, "ImageFile")
         if image_file:
             if Path(image_file).exists():
@@ -150,6 +158,8 @@ class AcquireImage:
                 # Load using default params
             else:
                 print("Invalid image file path specified, file not found")
+
+        return self.cv_image
 
     # -------------------------------------------------------------------------
     def return_data(self, attr):
@@ -206,6 +216,8 @@ if __name__ == "__main__":
     handle4 = AcquireImage(**params)
     r4a = handle4.open_image()
     r4b = handle4.return_data("cv_image")
+
+    r4c = AcquireImage(**params).open_image()
 
     handle5 = AcquireImage()
     r5a = handle5.open_image(**params)
