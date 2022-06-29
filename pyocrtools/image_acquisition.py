@@ -180,7 +180,7 @@ if __name__ == "__main__":
     cwd = Path.cwd()
     params = {"BoundBox": (1562, 645, 120, 70),
               "ImageFile":
-                  str(cwd /
+                  str(cwd.parent /
                       r"tests\supportingdata\machineStatus_Header.png")
               }
 
@@ -217,7 +217,7 @@ if __name__ == "__main__":
     r6b = handle6.return_data("cv_image")
 
     params["ImageFile"] = \
-        str(cwd /
+        str(cwd.parent /
             r"tests\supportingdata\machineStatus_Heade.png")
     handle7 = AcquireImage(**params)
     r7a = handle7.open_image()
