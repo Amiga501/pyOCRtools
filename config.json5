@@ -1,0 +1,10 @@
+{ 
+    // ------------------------------------------------------------------------
+    // pyOCRtools
+    // ------------------------------------------------------------------------
+    // JSON5 file containing configuration parameters
+    // v1.0
+    // ------------------------------------------------------------------------
+    // "tesseract_path": "J:\\Program Files\\Tesseract-OCR\\tesseract.exe",
+    "tesseract_path": "D:\\Programs\\Tesseract-OCR\\tesseract.exe",    
+}
