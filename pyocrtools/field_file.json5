@@ -1,0 +1,77 @@
+{ 
+    // ------------------------------------------------------------------------
+    // pyOCRtools
+    // ------------------------------------------------------------------------
+    // JSON5 file containing the fields and paths
+    // v1.0
+    // ------------------------------------------------------------------------
+    "field1": 
+    {
+        "path1": 
+        [
+        {
+            "foo": "scale",
+            "params": 
+            {
+                "fx": 2,
+                "fy": 2,
+            },
+        },
+        ],
+        "path2":
+        [
+        {
+            "foo": "greyscale",
+            "params": "None",
+        },        
+        ],
+        "path3":
+        [
+        {
+            "foo": "threshold",
+            "params": 
+            {
+                "Binary_OTSU": "True",
+            },      
+        },
+        ],
+        "path4":
+        [
+        {
+            "foo": "invert",
+            "params": "None",
+        },
+        ],
+    },
+    "field2": 
+    {
+        "path1": 
+        [
+        {
+            "foo": "scale",
+            "params": 
+            {
+                "fx": 4,
+               "fy": 4,
+            },
+        },
+        ],
+        "path2":
+        [
+        {
+            "foo": "greyscale",
+            "params": "None",
+        },       
+        ],        
+        "path3":
+        [
+        {
+            "foo": "threshold",
+            "params": 
+            {
+                "Binary_OTSU": "True",
+            },
+        },
+        ],
+    },
+}
